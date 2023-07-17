@@ -11,7 +11,7 @@ workdir := build
 
 # change the following variables to suit your environment
 
-pdflatex = pdflatex --output-directory=$(workdir)
+pdflatex = tectonic --outdir $(workdir) --keep-intermediates
 bibtex = bibtex
 makeindex = makeindex
 touch = touch

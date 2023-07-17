@@ -4,9 +4,8 @@
 # (c) 2020 Prof Dr Andreas Mueller
 #
 
-pdflatex = pdflatex
+pdflatex = tectonic
 
-all: images
 images: images/ann_simple.pdf images/ann_simple_1D.pdf
 
 %.pdf: %.tex

@@ -24,9 +24,9 @@ $(workdir):
 buch.pdf:	$(workdir)/buch.pdf
 	cp $(workdir)/buch.pdf buch.pdf
 	
-$(workdir)/buch.pdf:	$(workdir) buch.tex $(ALLTEXFILES) $(workdir)/buch.ind
+$(workdir)/buch.pdf:	$(workdir) buch.tex $(ALLTEXFILES) # $(workdir)/buch.ind
 	$(pdflatex) buch.tex
-	cd $(workdir); $(bibtex) buch
+# cd $(workdir); $(bibtex) buch
 
 $(workdir)/buch.ind:	$(workdir) $(workdir)/buch.idx
 	cd $(workdir); $(makeindex) buch.idx
